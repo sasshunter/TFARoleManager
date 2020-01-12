@@ -4,15 +4,17 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>503d8606-700b-47d9-af76-304e581a65d4</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>main.py</StartupFile>
+    <StartupFile>rmm\DBHandler.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>TFARoleManager</Name>
     <RootNamespace>TFARoleManager</RootNamespace>
-    <LaunchProvider>Standard Python launcher</LaunchProvider>
-    <EnableNativeCodeDebugging>True</EnableNativeCodeDebugging>
+    <LaunchProvider>IronPython (.NET) launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <DebugStdLib>False</DebugStdLib>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,6 +38,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="rmm\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tfa.db" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
