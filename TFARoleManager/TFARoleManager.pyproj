@@ -4,13 +4,15 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>503d8606-700b-47d9-af76-304e581a65d4</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>TFARoleManager.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>TFARoleManager</Name>
     <RootNamespace>TFARoleManager</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>True</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,10 +23,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DBHandler.py">
+    <Compile Include="rmm\rmm.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="TFARoleManager.py" />
+    <Compile Include="rmm\RMMember.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="rmm\DBHandler.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="main.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="rmm\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
